@@ -6,7 +6,7 @@
 DAYANA GONZALEZ
 
 *******RUTAS DE LOS REPOSITORIOS********
-https://github.com/d4y4n/GrupalDayana
+https://github.com/d4y4n/PruebaFinalWeb
 
 *******RESUMEN DEL PROYECTO********
 Una empresa de asesorías en prevención de riesgos necesita contar con un sistema de información
