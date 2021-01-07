@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevencion System DG</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+    
+
+
+
+
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <div class="logo">
+				<img src="https://www.evolmind.com/articulos/img/2018/05/prevencion-riesgos-laborales-1024x702.png" width="150" height="100" alt="Logotipo Prevencion">
+			</div>
+        </a>
+        <nav>
+			<ul class="nav">
+                <li><a href="index.html">Home</a>
+					<ul>
+						<li><a href="index.html#objetivos">Objetivos</a></li>
+						<li><a href="index.html#publico">Publicos</a></li>
+                        <li><a href="index.html#procesos">Procesos</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="">Opciones System</a>
+					<ul>
+                        <li><a href="administrarasistentes.html">Administrar Asistentes</a></li>
+                        <li><a href="crearcapacitacion.html">Crear Capacitación</a></li>
+                        <li><a href="crearpago.html">Crear Pago</a></li>
+                        <li><a href="crearusuario.html">Crear Usuario</a></li>
+                        <li><a href="editaradministrativo.html">Editar Administrativo</a></li>
+                        <li><a href="editarcliente.html">Editar Cliente</a></li>
+                        <li><a href="editarprofesional.html">Editar Profesional</a></li>
+                        <li><a href="listadoaccidentes.html">Listar Accidentes</a></li>
+                        <li><a href="listadoasesorias.html">Listado Asesorias</a></li>
+                        <li><a href="listadopago.html">Listar Pago</a></li>
+                        <li><a href="listadousuarios.html">Listar Usuario</a></li>
+                        <li><a href="listadovisitas.html">Listar Visitas</a></li>
+                        <li><a href="listarcapacitaciones.html">Listar Capacitación</a></li>
+                        <li><a href="reportes.html">Reportes</a></li>
+                        <li><a href="responderchecklist.html">Responder Check List</a></li>  
+                    </ul>
+				</li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+    </header>
+
+    <h1 align="center">Editar Cliente</h1>
+    <div class="imagen">
+        <img  src="https://i2.wp.com/www.revistaseguridadminera.com/wp-content/uploads/2020/02/Cuales-son-las-etapas-del-proceso-de-capacitacion.jpg?fit=800%2C394&ssl=1" width="1400" height="400" alt="Imagen Capacitación" >
+    </div>
+    <main>
+        <h3>Modifica los Datos Necesarios</h3>
+        <br>
+        <a href="listadousuarios.html">Volver a Listado de Usuarios</a>
+        <hr>
+        <form action="" id="actualizar-form">
+            <fieldset>
+                <legend>Información Cliente</legend>
+                <label for="run">RUN Cliente: </label>
+                <input type="text" name="run" id="run">
+                <br><br>
+                <label for="nombre_cliente">Nombre Cliente: </label>
+                <input type="text" name="nombre_cliente" id="nombre_cliente" >
+                <br><br>
+                <label for="apellido_cliente">Apellido Cliente: </label>
+                <input type="text" name="apellido_cliente" id="apellido_cliente" >
+                <br><br>
+                <label for="fono_cliente">Telefono: </label>
+                <input type="text" name="fono_cliente" id="fono_cliente" >
+                <br><br>
+                <label for="afp">AFP: </label>
+                <select id="afp" name="afp" >
+                    <option value="">SELECIONAR</option>
+                    <option value="value1">CAPITAL</option>
+                    <option value="value2">CUPRUM</option>
+                    <option value="value3">HABITAT</option>
+                    <option value="value4">MODELO</option>
+                    <option value="value5">PLAN VITAL</option>
+                    <option value="value6">PROVIDA</option>
+                </select>
+                <br><br>
+                <label for="salud">Sistema Salud: </label>
+                <select id="salud" name="salud">
+                    <option value="">SELECIONAR</option>
+                    <option value="value1">ISAPRE</option>
+                    <option value="value2">FONASA</option>
+                </select>
+                <br><br>
+                <label for="direccion">Dirección: </label>
+                <input type="text" name="direccion" id="direccion" >
+                <br><br>
+                <label for="comuna">Comuna: </label>
+                <input type="text" name="comuna" id="comuna" >
+                <br><br>
+                <label for="edad">Edad: </label>
+                <input type="number" name="edad" id="edad" >
+                <br><br>
+                <input type="button" value="Modificar Cliente" id="guardar">
+            </fieldset>
+        </form>
+    </main>
+   
+    <hr>
+
+    <footer>
+        <nav>
+            <a href="index.html#objetivos">Objetivos</a>
+            <a href="index.html#publico">Publicos</a>
+            <a href="index.html#procesos">Procesos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <p class="copyright">Todos los derechos reservados 2020 Prevencion System DG &copy;</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="validar-plugin.js"></script>
+    
+</body>
+</html>

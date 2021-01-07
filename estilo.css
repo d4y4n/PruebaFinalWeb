@@ -1,0 +1,522 @@
+/*ESTILOS DEL SITIO*/
+.contenedor {
+    width: 95%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #222222;
+    background-color: #FFFFFF;
+}
+
+main a {
+    color: #000000;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+    color: #FFDD00;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+h3 {
+    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+    color: #FFDD00;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #FFDD00;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 100px;
+}
+
+
+
+nav {
+    padding: 20px;
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+ul, ol {
+    list-style:none;
+}
+
+
+.nav > li {
+    float:left;
+}
+
+.nav li a {
+    background-color:#000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.nav li a:hover {
+    background-color:#434343;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0px;
+}
+
+.pagina-objetivos {
+    padding: 30px 0;
+}
+
+.pagina-publico {
+    padding: 30px 0;
+}
+
+.pagina-procesos {
+    padding: 30px 0;
+}
+
+.iconos-objetivos {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+
+}
+
+.icono {
+    text-align: center;
+}
+
+.icono h3 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.icono p {
+    text-align: center;
+    color: #222222;
+}
+
+
+
+.seccion {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+footer p {
+    color: #FFDD00;
+    text-align: center;
+}
+
+p {
+    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+    text-align: justify;
+    font-size: 18px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    color: #FFFFFF;
+}
+
+a:hover {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    color: #FFDD00;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: #FFDD00;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+    max-width: 75%;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=date],
+input[type=number],
+input[type=time] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin: .5em 0 0 0;
+}
+
+form {
+
+    margin: 0 auto;
+    width: 600px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-top: 50px;
+}
+
+ol li {
+    counter-increment: my-awesome-counter;
+    display: flex;
+    width: 50%;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+ol li::before {
+    content: ""counter(my-awesome-counter);
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 10px;
+    font-family: 'Abril Fatface', serif;
+    line-height: 1;
+}
+
+.imagen {
+
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+
+/*Mobile*/
+
+@media screen and (max-width: 480px) {
+
+    .contenedor{
+        max-width: 450px;
+    }
+
+    .iconos-objetivos{
+        width: 50%;
+    }
+    
+    .icono img {
+       width: 50%;
+    }
+
+    .icono h3 {
+        font-size: 15px;
+    }
+    
+    .icono p {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 8px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+
+    fieldset {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    input[type=button],
+    input[type=submit],
+    input[type=reset] {
+        width: 100%;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    input[type=date],
+    input[type=number],
+    input[type=time] {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    form {
+
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    table {
+        font-size: 8px;
+    }
+
+    table th {
+        font-size: 8px;
+    }
+
+   
+
+}
+
+/*Tablet*/
+
+@media screen and (max-width: 768px) {
+
+    img {
+        width: 100%;
+    }
+
+    .contenedor{
+        max-width: 600px;
+    }
+
+    .iconos-objetivos{
+        width: 60%;
+    }
+    
+    .icono img {
+       width: 60%;
+    }
+
+
+    h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        padding: 5px;
+        width: 95%;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    a {
+        font-size: 15px;
+    }
+
+    fieldset {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    input[type=button],
+    input[type=submit],
+    input[type=reset] {
+        width: 100%;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    input[type=date],
+    input[type=number],
+    input[type=time] {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    form {
+
+        margin: 0 auto;
+        width: 400px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    table th {
+        font-size: 12px;
+    }
+
+}
+
+/*Desktop*/
+
+@media screen and (max-width: 1024px) {
+
+
+    h1 {
+        font-size: 35px;
+    }
+
+    nav {
+        padding: 5px;
+        width: 95%;
+    }
+
+    a {
+        font-size: 15px;
+    }
+
+    fieldset {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    input[type=button],
+    input[type=submit],
+    input[type=reset] {
+        width: 100%;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    input[type=date],
+    input[type=number],
+    input[type=time] {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    table th {
+        font-size: 14px;
+    }
+
+    .contenedor{
+        max-width: 800px;
+    }
+
+    .iconos-objetivos{
+        width: 70%;
+    }
+    
+    .icono img {
+       width: 70%;
+    }
+
+
+}
+
+label.error {
+    color: darkred;
+}
+
+input.error {
+    border: 1px solid darkred;
+}

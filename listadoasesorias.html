@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevencion System DG</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="validar.js"></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <div class="logo">
+				<img src="https://www.evolmind.com/articulos/img/2018/05/prevencion-riesgos-laborales-1024x702.png" width="150" height="100" alt="Logotipo Prevencion">
+			</div>
+        </a>
+        <nav>
+			<ul class="nav">
+                <li><a href="index.html">Home</a>
+					<ul>
+						<li><a href="index.html#objetivos">Objetivos</a></li>
+						<li><a href="index.html#publico">Publicos</a></li>
+                        <li><a href="index.html#procesos">Procesos</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="">Opciones System</a>
+					<ul>
+                        <li><a href="administrarasistentes.html">Administrar Asistentes</a></li>
+                        <li><a href="crearcapacitacion.html">Crear Capacitación</a></li>
+                        <li><a href="crearpago.html">Crear Pago</a></li>
+                        <li><a href="crearusuario.html">Crear Usuario</a></li>
+                        <li><a href="editaradministrativo.html">Editar Administrativo</a></li>
+                        <li><a href="editarcliente.html">Editar Cliente</a></li>
+                        <li><a href="editarprofesional.html">Editar Profesional</a></li>
+                        <li><a href="listadoaccidentes.html">Listar Accidentes</a></li>
+                        <li><a href="listadoasesorias.html">Listado Asesorias</a></li>
+                        <li><a href="listadopago.html">Listar Pago</a></li>
+                        <li><a href="listadousuarios.html">Listar Usuario</a></li>
+                        <li><a href="listadovisitas.html">Listar Visitas</a></li>
+                        <li><a href="listarcapacitaciones.html">Listar Capacitación</a></li>
+                        <li><a href="reportes.html">Reportes</a></li>
+                        <li><a href="responderchecklist.html">Responder Check List</a></li>  
+                    </ul>
+				</li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+    </header>
+
+    <h1 align="center">Listar Asesorias</h1>
+    <div class="imagen">
+        <img  src="https://i2.wp.com/www.revistaseguridadminera.com/wp-content/uploads/2020/02/Cuales-son-las-etapas-del-proceso-de-capacitacion.jpg?fit=800%2C394&ssl=1" width="1400" height="400" alt="Imagen Capacitación" >
+    </div>
+    <main>
+        <h3>Listado de Asesorias Ingresadas</h3>
+        <table id="tabla">
+            <tr id="cabecera">
+                <th>CODIGO ASESORIA</th>
+                <th>FECHA</th>
+                <th>NOMBRE CLIENTE</th>
+                <th>PROFESIONAL</th>
+                <th>ACCIONES</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>25/10/2020</td>
+                <td>Minera SS</td>
+                <td>Dayana Gonzalez</td>
+                <td>
+                    
+                        <img style="cursor:pointer;" id="actividades" alt="Listar Actividades de Mejora" src="https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/14324583051535701996-512.png" width="16" height="16" />
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>26/10/2020</td>
+                <td>Construcciones Rapiditas SA</td>
+                <td>Diego Sandoval</td>
+                <td>
+                    
+                        <img style="cursor:pointer;" id="actividades2" alt="Listar Actividades de Mejora" src="https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/14324583051535701996-512.png" width="16" height="16" />
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>26/10/2020</td>
+                <td>Productos Industriales La Industria LTDA</td>
+                <td>Danae Jara</td>
+                <td>
+                    
+                        <img style="cursor:pointer;" id="actividades3" alt="Listar Actividades de Mejora" src="https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/14324583051535701996-512.png" width="16" height="16" />
+                    
+                </td>
+            </tr>
+          </table>
+        </div>
+        <br>
+        <div >
+            <table id="tabla-actividades" style="display:none;">
+                <tr id="cabecera2">
+                    <th>CODIGO</th>
+                    <th>ACTIVIDAD MEJORA</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Instalar Extinguidores</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Formar Comite Paritario</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Revisar Hergonomia</td>
+                </tr>
+              </table>
+        </div>
+        <hr>
+        <p><input type="button" id="estilo1" value="ESTILO 1"></p>
+        <p><input type="button" id="estilo2" value="ESTILO 2"></p>
+        <p><input type="button" id="estilo3" value="ESTILO 3"></p>
+    </main>
+   
+    <hr>
+
+    <footer>
+        <nav>
+            <a href="index.html#objetivos">Objetivos</a>
+            <a href="index.html#publico">Publicos</a>
+            <a href="index.html#procesos">Procesos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <p class="copyright">Todos los derechos reservados 2020 Prevencion System DG &copy;</p>
+    </footer>
+    
+</body>
+</html>

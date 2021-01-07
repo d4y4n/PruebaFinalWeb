@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevencion System DG</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href= 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+    <link href= 'https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquery.Rut.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    
+    
+    
+    
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <div class="logo">
+				<img src="https://www.evolmind.com/articulos/img/2018/05/prevencion-riesgos-laborales-1024x702.png" width="150" height="100" alt="Logotipo Prevencion">
+			</div>
+        </a>
+        <nav>
+			<ul class="nav">
+                <li><a href="index.html">Home</a>
+					<ul>
+						<li><a href="index.html#objetivos">Objetivos</a></li>
+						<li><a href="index.html#publico">Publicos</a></li>
+                        <li><a href="index.html#procesos">Procesos</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="">Opciones System</a>
+					<ul>
+                        <li><a href="administrarasistentes.html">Administrar Asistentes</a></li>
+                        <li><a href="crearcapacitacion.html">Crear Capacitación</a></li>
+                        <li><a href="crearpago.html">Crear Pago</a></li>
+                        <li><a href="crearusuario.html">Crear Usuario</a></li>
+                        <li><a href="editaradministrativo.html">Editar Administrativo</a></li>
+                        <li><a href="editarcliente.html">Editar Cliente</a></li>
+                        <li><a href="editarprofesional.html">Editar Profesional</a></li>
+                        <li><a href="listadoaccidentes.html">Listar Accidentes</a></li>
+                        <li><a href="listadoasesorias.html">Listado Asesorias</a></li>
+                        <li><a href="listadopago.html">Listar Pago</a></li>
+                        <li><a href="listadousuarios.html">Listar Usuario</a></li>
+                        <li><a href="listadovisitas.html">Listar Visitas</a></li>
+                        <li><a href="listarcapacitaciones.html">Listar Capacitación</a></li>
+                        <li><a href="reportes.html">Reportes</a></li>
+                        <li><a href="responderchecklist.html">Responder Check List</a></li>  
+                    </ul>
+				</li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+    </header>
+
+    <h1 align="center">Listado de Accidentes / INGRESO ACCIDENTES</h1>
+    <div class="imagen">
+        <img  src="https://i2.wp.com/www.revistaseguridadminera.com/wp-content/uploads/2020/02/Cuales-son-las-etapas-del-proceso-de-capacitacion.jpg?fit=800%2C394&ssl=1" width="1400" height="400" alt="Imagen Capacitación" >
+    </div>
+    <main>
+        <h3>Ingresa los Accidentes</h3>
+        <br>
+        <hr>
+        <form action="" id="form_acci">
+            <fieldset>
+                <legend>Información del Accidente</legend>
+                <label for="id_acci">ID Accidente: </label>
+                <input type="text" name="id_acci" id="id_acci">
+                <br><br>
+                <label for="fecha_acci">Fecha Accidente: </label>
+                <input type="text" name="fecha_acci" id="fecha_acci" >
+                <br><br>
+                <label for="hora_acci">Hora Accidente: </label>
+                <input type="text" name="hora_acci" id="hora_acci" >
+                <br><br>
+                <label for="lugar_acci">Lugar Accidente: </label>
+                <input type="text" name="lugar_acci" id="lugar_acci" >
+                <br><br>
+                <label for="origen_acci">Origen: </label>
+                <input type="text" name="origen_acci" id="origen_acci" >
+                <br><br>
+                <label for="cliente_acc">Cliente: </label>
+                <select id="cliente_acc" name="cliente_acc" >
+                    <option value="">SELECIONAR</option>
+                    <option value="value1">Ingenierias en Construcción</option>
+                    <option value="value2">Construcciones SPA</option>
+                    <option value="value3">Minera Oculta LTDA</option>
+                    <option value="value4">Productos Industriales El Jaboncito SA</option>
+                </select>
+                <br><br>
+                <label for="consecuencias">Concecuencias: </label>
+                <input type="text" name="consecuencias" id="consecuencias" >
+                <br><br>
+                <input type="button" value="INGRESAR ACCIDENTE" id="guardar_acci">
+                
+            </fieldset>
+        </form>
+    </main>
+    
+    <hr>
+
+    <footer>
+        <nav>
+            <a href="index.html#objetivos">Objetivos</a>
+            <a href="index.html#publico">Publicos</a>
+            <a href="index.html#procesos">Procesos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <p class="copyright">Todos los derechos reservados 2020 Prevencion System DG &copy;</p>
+    </footer>
+    <script type="text/javascript" src="validar-plugin.js"></script>
+    <script type="text/javascript">
+        $( function() {
+            $("#fecha_acci").datepicker({
+                format: 'dd/mm/yy'
+            });
+        });
+
+        $(function () {
+            $("#hora_acci").timepicker({
+                format: 'HH:mm'
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>

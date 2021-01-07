@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevencion System DG</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href= 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="tabla.js"></script>
+   
+    <script>
+        $(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    "Cerrar": function () {
+                    $(this).dialog("close");
+                    }
+                }
+            });
+            $("#abrir")
+                .button()
+                .click(function () {
+                    $("#dialog").dialog("option", "width", '65%');
+                    $("#dialog").dialog("open");
+            });
+        });   
+
+        $(document).ready(function() {
+            $('#tabla').DataTable();
+        } );
+    </script>
+
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <div class="logo">
+				<img src="https://www.evolmind.com/articulos/img/2018/05/prevencion-riesgos-laborales-1024x702.png" width="150" height="100" alt="Logotipo Prevencion">
+			</div>
+        </a>
+        <nav>
+			<ul class="nav">
+                <li><a href="index.html">Home</a>
+					<ul>
+						<li><a href="index.html#objetivos">Objetivos</a></li>
+						<li><a href="index.html#publico">Publicos</a></li>
+                        <li><a href="index.html#procesos">Procesos</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="">Opciones System</a>
+					<ul>
+                        <li><a href="administrarasistentes.html">Administrar Asistentes</a></li>
+                        <li><a href="crearcapacitacion.html">Crear Capacitación</a></li>
+                        <li><a href="crearpago.html">Crear Pago</a></li>
+                        <li><a href="crearusuario.html">Crear Usuario</a></li>
+                        <li><a href="editaradministrativo.html">Editar Administrativo</a></li>
+                        <li><a href="editarcliente.html">Editar Cliente</a></li>
+                        <li><a href="editarprofesional.html">Editar Profesional</a></li>
+                        <li><a href="listadoaccidentes.html">Listar Accidentes</a></li>
+                        <li><a href="listadoasesorias.html">Listado Asesorias</a></li>
+                        <li><a href="listadopago.html">Listar Pago</a></li>
+                        <li><a href="listadousuarios.html">Listar Usuario</a></li>
+                        <li><a href="listadovisitas.html">Listar Visitas</a></li>
+                        <li><a href="listarcapacitaciones.html">Listar Capacitación</a></li>
+                        <li><a href="reportes.html">Reportes</a></li>
+                        <li><a href="responderchecklist.html">Responder Check List</a></li>  
+                    </ul>
+				</li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+    </header>
+
+    <h1 align="center">Lisdo de Asistentes</h1>
+    <div class="imagen">
+        <img  src="https://i2.wp.com/www.revistaseguridadminera.com/wp-content/uploads/2020/02/Cuales-son-las-etapas-del-proceso-de-capacitacion.jpg?fit=800%2C394&ssl=1" width="1400" height="400" alt="Imagen Capacitación" >
+    </div>
+    <main>
+        <div id="dialog" title="Ingreso Asistente">
+            <form action="" id="asistente-form">
+                    <label for="id_asis">ID Asistente: </label>
+                    <input type="text" name="id_asis" id="id_asis">
+                    <br>
+                    <label for="nombre_asis">Nombre Asistente: </label>
+                    <input type="text" name="nombre_asis" id="nombre_asis" >
+                    <br>
+                    <label for="edad_asis">Edad: </label>
+                    <input type="text" name="edad_asis" id="edad_asis" >
+                    <br>
+                    <label for="correo_asis">Correo: </label>
+                    <input type="text" name="correo_asis" id="correo_asis" >
+                    <br>
+                    <label for="telefono_asis">Telefono: </label>
+                    <input type="text" name="telefono_asis" id="telefono_asis" placeholder="+56912345678" >
+                    <br>
+                    <label for="fecha">Fecha y Hora: </label>
+                    <select id="fecha" name="fecha" >
+                        <option value="">SELECIONAR</option>
+                        <option value="value1">22/12/2020 --> 12:00 HRS</option>
+                        <option value="value2">22/12/2020 --> 16:00 HRS</option>
+                        <option value="value3">22/12/2020 --> 18:00 HRS</option>
+                        <option value="value4">23/12/2020 --> 12:00 HRS</option>
+                        <option value="value5">23/12/2020 --> 16:00 HRS</option>
+                        <option value="value6">23/12/2020 --> 18:00 HRS</option>
+                    </select>
+                    <br>
+                    <label for="cliente">Cliente: </label>
+                    <input type="text" name="cliente" id="cliente" >
+                    <br>
+                    <input type="button" value="CREAR ASISTENTE" id="guardar-asis">
+              
+            </form>
+        </div>
+            
+        <h3>Administrar Asistentes</h3>
+        <br>
+        <p><button id="abrir">CREAR ASISTENTE</button></p>
+          <br>
+          <table id="tabla" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID ASISTENTE</th>
+                    <th>CORREO</th>
+                    <th>TELEFONO</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>micorreo@gmail.com</td>
+                    <td>+56 9 45456565</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>email@gmail.com</td>
+                    <td>+56 9 85412478</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>nombre@gmail.com</td>
+                    <td>+56 9 35741598</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>contacto@gmail.com</td>
+                    <td>+56 9 12345784</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>contacto5@gmail.com</td>
+                    <td>+56 9 75957108</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>contacto6@gmail.com</td>
+                    <td>+56 9 52061222</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>contacto7@gmail.com</td>
+                    <td>+56 9 52120007</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>contacto8@gmail.com</td>
+                    <td>+56 9 96850230</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>contacto9@gmail.com</td>
+                    <td>+56 9 65852014</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>contacto10@gmail.com</td>
+                    <td>+56 9 32175365</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>contacto11@gmail.com</td>
+                    <td>+56 9 95147534</td>
+                    <td>
+                        <a href="editaradministrativo.html" title="Editar">
+                            <img alt="Editar" src="https://image.flaticon.com/icons/png/512/1259/1259851.png" width="16" height="16" />
+                        </a>
+                        |
+                        <a href="#" title="Eliminar">
+                            <img alt="Eliminar" src="https://img2.freepng.es/20180428/khe/kisspng-computer-icons-clip-art-5ae517c0367ec6.3178129215249632642232.jpg" width="16" height="16" />
+                        </a> 
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>ID ASISTENTE</th>
+                    <th>CORREO</th>
+                    <th>TELEFONO</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </tfoot>
+           
+          </table>
+        </div>
+    </main>
+   
+    <hr>
+
+    <footer>
+        <nav>
+            <a href="index.html#objetivos">Objetivos</a>
+            <a href="index.html#publico">Publicos</a>
+            <a href="index.html#procesos">Procesos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <p class="copyright">Todos los derechos reservados 2020 Prevencion System DG &copy;</p>
+    </footer>
+    <script type="text/javascript" src="validar-plugin.js"></script>
+    
+</body>
+</html>

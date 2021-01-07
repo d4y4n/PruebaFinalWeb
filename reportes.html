@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevencion System DG</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>  
+    <script src="validar.js"></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <div class="logo">
+				<img src="https://www.evolmind.com/articulos/img/2018/05/prevencion-riesgos-laborales-1024x702.png" width="150" height="100" alt="Logotipo Prevencion">
+			</div>
+        </a>
+        <nav>
+			<ul class="nav">
+                <li><a href="index.html">Home</a>
+					<ul>
+						<li><a href="index.html#objetivos">Objetivos</a></li>
+						<li><a href="index.html#publico">Publicos</a></li>
+                        <li><a href="index.html#procesos">Procesos</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="">Opciones System</a>
+					<ul>
+                        <li><a href="administrarasistentes.html">Administrar Asistentes</a></li>
+                        <li><a href="crearcapacitacion.html">Crear Capacitación</a></li>
+                        <li><a href="crearpago.html">Crear Pago</a></li>
+                        <li><a href="crearusuario.html">Crear Usuario</a></li>
+                        <li><a href="editaradministrativo.html">Editar Administrativo</a></li>
+                        <li><a href="editarcliente.html">Editar Cliente</a></li>
+                        <li><a href="editarprofesional.html">Editar Profesional</a></li>
+                        <li><a href="listadoaccidentes.html">Listar Accidentes</a></li>
+                        <li><a href="listadoasesorias.html">Listado Asesorias</a></li>
+                        <li><a href="listadopago.html">Listar Pago</a></li>
+                        <li><a href="listadousuarios.html">Listar Usuario</a></li>
+                        <li><a href="listadovisitas.html">Listar Visitas</a></li>
+                        <li><a href="listarcapacitaciones.html">Listar Capacitación</a></li>
+                        <li><a href="reportes.html">Reportes</a></li>
+                        <li><a href="responderchecklist.html">Responder Check List</a></li>  
+                    </ul>
+				</li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+    </header>
+
+    <h1 align="center">REPORTES</h1>
+    <div class="imagen">
+        <img  src="https://i2.wp.com/www.revistaseguridadminera.com/wp-content/uploads/2020/02/Cuales-son-las-etapas-del-proceso-de-capacitacion.jpg?fit=800%2C394&ssl=1" width="1400" height="400" alt="Imagen Capacitación" >
+    </div>
+    <main>
+        <h3>REPORTES</h3>
+        
+    </main>
+    <script>
+        var fecha = new Date();
+        var fecha_act = document.getElementById("fecha_act");
+        fecha_act.value=(fecha.getDate() + "/" + (fecha.getMonth() +1) + "/" + fecha.getFullYear());
+    </script>
+    <hr>
+    <center>
+
+        <canvas id="barra" style="max-width: 50%;"></canvas>
+        <br>
+        <br>
+        <canvas id="linea" style="max-width: 50%;"></canvas>
+        <br>
+        <br>
+        <canvas id="torta" style="max-width: 50%;"></canvas>
+        
+
+    </center>
+        
+   
+    
+   
+
+    <script>
+        var ctx= document.getElementById("barra").getContext("2d");
+        var barra= new Chart(ctx,{
+            type:"bar",
+            data:{
+                labels:['Pudahuel','Cerrilos','Quilicura','Santiago','Providencia','Lampa','Colina','Huechuraba' ],
+                datasets:[{
+                        label:'Clientes Por Comuna',
+                        data:[3,15,7,14,10,7,25,5],
+                        backgroundColor:[
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)'
+                        ]
+                }]
+            },
+            options:{
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        });
+    </script>
+
+    <script>
+        var ctx= document.getElementById("linea").getContext("2d");
+        var linea= new Chart(ctx,{
+            type:"line",
+            data:{
+                labels:['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre' ],
+                datasets:[{
+                        label:'Cantidad Accidentes',
+                        data:[1,1,5,2,10,3,6,5,1,8,7,11],
+                        backgroundColor:[
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(66, 134, 244,0.5)'
+                        ]                        
+                }, {
+                        label:'Cantidad Visitas',
+                        data:[8,4,15,4,19,12,4,9,8,11,2,15],
+                        backgroundColor:[
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(74, 135, 72,0.5)'
+                        ]
+                }]
+            },
+            
+            options:{
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        });
+    </script>
+
+    <script>
+        var ctx= document.getElementById("torta").getContext("2d");
+        var torta= new Chart(ctx,{
+            type:"pie",
+            data:{
+                labels:['cumplidos','no cumplidos','cumplidos con observación'],
+                datasets:[{
+                        label:'Chequeos',
+                        data:[158,22,20],
+                        backgroundColor:[
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(229, 89, 50,0.5)'
+                        ]
+                }]
+            },
+            options:{
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        });
+    </script>
+
+    <footer>
+        <nav>
+            <a href="index.html#objetivos">Objetivos</a>
+            <a href="index.html#publico">Publicos</a>
+            <a href="index.html#procesos">Procesos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <p class="copyright">Todos los derechos reservados 2020 Prevencion System DG &copy;</p>
+    </footer>
+    
+</body>
+</html>
